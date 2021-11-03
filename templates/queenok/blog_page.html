@@ -21,15 +21,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="viewport" content="width=device-width">
   <!-- =====  CSS  ===== -->
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
-  <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
-  <link rel="shortcut icon" href="images/favicon.png">
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/magnific-popup.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.css' %}">
+  <link rel="shortcut icon" href="{% static 'images/favicon.png' %}">
+  <link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png' %}">
+  <link rel="apple-touch-icon" sizes="72x72" href="{% static 'images/apple-touch-icon-72x72.png' %}">
+  <link rel="apple-touch-icon" sizes="114x114" href="{% static 'images/apple-touch-icon-114x114.png' %}">
 </head>
 
 <body>
@@ -78,7 +79,7 @@
               <button type="button" class="btn btn-default btn-lg"><i class="fa fa-search"></i></button>
               </span> </div>
             </div>
-            <div class="navbar-header col-xs-6 col-sm-4"> <a class="navbar-brand" href="index.html"> <img alt="OYEENok" src="images/logo.png"> </a> </div>
+            <div class="navbar-header col-xs-6 col-sm-4"> <a class="navbar-brand" href="index.html"> <img alt="OYEENok" src="{% static 'images/logo.png' %}"> </a> </div>
             <div class="col-xs-6 col-sm-4 shopcart">
               <div id="cart" class="btn-group btn-block mtb_40">
                 <button type="button" class="btn" data-target="#cart-dropdown" data-toggle="collapse" aria-expanded="true"><span id="shippingcart">Shopping cart</span><span id="cart-total">items (0)</span> </button>
@@ -89,14 +90,14 @@
                     <table class="table table-striped">
                       <tbody>
                         <tr>
-                          <td class="text-center"><a href="#"><img src="images/product/70x84.jpg" alt="iPod Classic" title="iPod Classic"></a></td>
+                          <td class="text-center"><a href="#"><img src="{% static 'images/product/70x84.jpg' %}" alt="iPod Classic" title="iPod Classic"></a></td>
                           <td class="text-left product-name"><a href="#">MacBook Pro</a> <span class="text-left price">$20.00</span>
                             <input class="cart-qty" name="product_quantity" min="1" value="1" type="number">
                           </td>
                           <td class="text-center"><a class="close-cart"><i class="fa fa-times-circle"></i></a></td>
                         </tr>
                         <tr>
-                          <td class="text-center"><a href="#"><img src="images/product/70x84.jpg" alt="iPod Classic" title="iPod Classic"></a></td>
+                          <td class="text-center"><a href="#"><img src="{% static 'images/product/70x84.jpg' %}" alt="iPod Classic" title="iPod Classic"></a></td>
                           <td class="text-left product-name"><a href="#">MacBook Pro</a> <span class="text-left price">$20.00</span>
                             <input class="cart-qty" name="product_quantity" min="1" value="1" type="number">
                           </td>
@@ -189,11 +190,11 @@
                       <ul>
                         <li id="myCarousel" class="carousel slide" data-ride="carousel">
                           <div class="carousel-inner">
-                            <div class="item active"> <a href="#"><img src="images/menu-banner1.jpg" class="img-responsive" alt="Banner1"></a></div>
+                            <div class="item active"> <a href="#"><img src="{% static 'images/menu-banner1.jpg' %}" class="img-responsive" alt="Banner1"></a></div>
                             <!-- End Item -->
-                            <div class="item"> <a href="#"><img src="images/menu-banner2.jpg" class="img-responsive" alt="Banner1"></a></div>
+                            <div class="item"> <a href="#"><img src="{% static 'images/menu-banner2.jpg' %}" class="img-responsive" alt="Banner1"></a></div>
                             <!-- End Item -->
-                            <div class="item"> <a href="#"><img src="images/menu-banner3.jpg" class="img-responsive" alt="Banner1"></a></div>
+                            <div class="item"> <a href="#"><img src="{% static 'images/menu-banner3.jpg' %}" class="img-responsive" alt="Banner1"></a></div>
                             <!-- End Item -->
                           </div>
                           <!-- End Carousel Inner -->
@@ -258,7 +259,7 @@
               </ul>
             </div>
           </div>
-          <div class="left_banner left-sidebar-widget mt_30 mb_40"> <a href="#"><img src="images/left1.jpg" alt="Left Banner" class="img-responsive" /></a> </div>
+          <div class="left_banner left-sidebar-widget mt_30 mb_40"> <a href="#"><img src="{% static 'images/left1.jpg' %}" alt="Left Banner" class="img-responsive" /></a> </div>
           <div class="blog-category left-sidebar-widget mb_50">
             <div class="heading-part mb_20 ">
               <h2 class="main_title">Blog Category</h2>
@@ -287,7 +288,7 @@
               <div class="row ">
                 <div class="blog-item mb_20">
                   <div class="post-format col-xs-4">
-                    <div class="thumb post-img"><a href="single_blog.html"> <img src="images/blog/blog_img_01.jpg"  alt="OYEENok"></a></div>
+                    <div class="thumb post-img"><a href="single_blog.html"> <img src="{% static 'images/blog/blog_img_01.jpg' %}"  alt="OYEENok"></a></div>
                   </div>
                   <div class="post-info col-xs-8 ">
                     <h5> <a href="single_blog.html">Fashions fade, style is eternal</a> </h5>
@@ -296,7 +297,7 @@
                 </div>
                 <div class="blog-item mb_20">
                   <div class="post-format col-xs-4">
-                    <div class="thumb post-img"><a href="single_blog.html"> <img src="images/blog/blog_img_02.jpg"  alt="OYEENok"></a></div>
+                    <div class="thumb post-img"><a href="single_blog.html"> <img src="{% static 'images/blog/blog_img_02.jpg' %}"  alt="OYEENok"></a></div>
                   </div>
                   <div class="post-info col-xs-8 ">
                     <h5> <a href="single_blog.html">Fashions fade, style is eternal</a> </h5>
@@ -305,7 +306,7 @@
                 </div>
                 <div class="blog-item mb_20">
                   <div class="post-format col-xs-4">
-                    <div class="thumb post-img"><a href="single_blog.html"> <img src="images/blog/blog_img_03.jpg"  alt="OYEENok"></a></div>
+                    <div class="thumb post-img"><a href="single_blog.html"> <img src="{% static 'images/blog/blog_img_03.jpg' %}"  alt="OYEENok"></a></div>
                   </div>
                   <div class="post-info col-xs-8 ">
                     <h5> <a href="single_blog.html">Fashions fade, style is eternal</a> </h5>
@@ -321,7 +322,7 @@
             <div class="three-col-blog text-left">
               <div class="blog-item col-md-6 mb_30">
                 <div class="post-format">
-                  <div class="thumb post-img"><a href="single_blog.html"> <img src="images/blog/blog_img_04.jpg"  alt="OYEENok"></a></div>
+                  <div class="thumb post-img"><a href="single_blog.html"> <img src="{% static 'images/blog/blog_img_04.jpg' %}"  alt="OYEENok"></a></div>
                   <div class="post-type"><i class="fa fa-music" aria-hidden="true"></i></div>
                 </div>
                 <div class="post-info mtb_20 ">
@@ -335,7 +336,7 @@
               </div>
               <div class="blog-item col-md-6 mb_30">
                 <div class="post-format">
-                  <div class="thumb post-img"><a href="single_blog.html"> <img src="images/blog/blog_img_05.jpg"  alt="OYEENok"></a></div>
+                  <div class="thumb post-img"><a href="single_blog.html"> <img src="{% static 'images/blog/blog_img_05.jpg' %}"  alt="OYEENok"></a></div>
                   <div class="post-type"><i class="fa fa-music" aria-hidden="true"></i></div>
                 </div>
                 <div class="post-info mtb_20 ">
@@ -349,7 +350,7 @@
               </div>
               <div class="blog-item col-md-6 mb_30">
                 <div class="post-format">
-                  <div class="thumb post-img"><a href="single_blog.html"> <img src="images/blog/blog_img_06.jpg"  alt="OYEENok"></a></div>
+                  <div class="thumb post-img"><a href="single_blog.html"> <img src="{% static 'images/blog/blog_img_06.jpg' %}"  alt="OYEENok"></a></div>
                   <div class="post-type"><i class="fa fa-music" aria-hidden="true"></i></div>
                 </div>
                 <div class="post-info mtb_20 ">
@@ -363,7 +364,7 @@
               </div>
               <div class="blog-item col-md-6 mb_30">
                 <div class="post-format">
-                  <div class="thumb post-img"><a href="single_blog.html"> <img src="images/blog/blog_img_07.jpg"  alt="OYEENok"></a></div>
+                  <div class="thumb post-img"><a href="single_blog.html"> <img src="{% static 'images/blog/blog_img_07.jpg' %}"  alt="OYEENok"></a></div>
                   <div class="post-type"><i class="fa fa-music" aria-hidden="true"></i></div>
                 </div>
                 <div class="post-info mtb_20 ">
@@ -377,7 +378,7 @@
               </div>
               <div class="blog-item col-md-6 mb_30">
                 <div class="post-format">
-                  <div class="thumb post-img"><a href="single_blog.html"> <img src="images/blog/blog_img_08.jpg"  alt="OYEENok"></a></div>
+                  <div class="thumb post-img"><a href="single_blog.html"> <img src="{% static 'images/blog/blog_img_08.jpg' %}"  alt="OYEENok"></a></div>
                   <div class="post-type"><i class="fa fa-music" aria-hidden="true"></i></div>
                 </div>
                 <div class="post-info mtb_20 ">
@@ -391,7 +392,7 @@
               </div>
               <div class="blog-item col-md-6 mb_30">
                 <div class="post-format">
-                  <div class="thumb post-img"><a href="single_blog.html"> <img src="images/blog/blog_img_01.jpg"  alt="OYEENok"></a></div>
+                  <div class="thumb post-img"><a href="single_blog.html"> <img src="{% static 'images/blog/blog_img_01.jpg' %}"  alt="OYEENok"></a></div>
                   <div class="post-type"><i class="fa fa-music" aria-hidden="true"></i></div>
                 </div>
                 <div class="post-info mtb_20 ">
@@ -405,7 +406,7 @@
               </div>
               <div class="blog-item col-md-6 mb_30">
                 <div class="post-format">
-                  <div class="thumb post-img"><a href="single_blog.html"> <img src="images/blog/blog_img_02.jpg"  alt="OYEENok"></a></div>
+                  <div class="thumb post-img"><a href="single_blog.html"> <img src="{% static 'images/blog/blog_img_02.jpg' %}"  alt="OYEENok"></a></div>
                   <div class="post-type"><i class="fa fa-music" aria-hidden="true"></i></div>
                 </div>
                 <div class="post-info mtb_20 ">
@@ -419,7 +420,7 @@
               </div>
               <div class="blog-item col-md-6 mb_30">
                 <div class="post-format">
-                  <div class="thumb post-img"><a href="single_blog.html"> <img src="images/blog/blog_img_03.jpg"  alt="OYEENok"></a></div>
+                  <div class="thumb post-img"><a href="single_blog.html"> <img src="{% static 'images/blog/blog_img_03.jpg' %}"  alt="OYEENok"></a></div>
                   <div class="post-type"><i class="fa fa-music" aria-hidden="true"></i></div>
                 </div>
                 <div class="post-info mtb_20 ">
@@ -453,7 +454,7 @@
       <div class="row">
         <div class="footer-top pb_60 mb_30">
           <div class="col-xs-12 col-sm-6">
-            <div class="footer-logo"> <a href="index.html"> <img src="images/footer-logo.png" alt="OYEENok"> </a> </div>
+            <div class="footer-logo"> <a href="index.html"> <img src="{% static 'images/footer-logo.png' %}" alt="OYEENok"> </a> </div>
             <div class="footer-desc">Lorem ipsum doLorem ipsum dolor sit amet, consectetur adipisicagna.</div>
           </div>
           <!-- =====  testimonial  ===== -->
@@ -461,19 +462,19 @@
             <div class="Testimonial">
               <div class="client owl-carousel">
                 <div class="item client-detail">
-                  <div class="client-avatar"> <img alt="" src="images/user1.jpg"> </div>
+                  <div class="client-avatar"> <img alt="" src="{% static 'images/user1.jpg' %}"> </div>
                   <div class="client-title"><strong>joseph Lui</strong></div>
                   <div class="client-designation mb_10"> - php Developer</div>
                   <p><i class="fa fa-quote-left" aria-hidden="true"></i>Lorem ipsum dolor sit amet, volumus oporteat his at sea in Rem ipsum dolor sit amet, sea in odio ..</p>
                 </div>
                 <div class="item client-detail">
-                  <div class="client-avatar"> <img alt="" src="images/user2.jpg"> </div>
+                  <div class="client-avatar"> <img alt="" src="{% static 'images/user2.jpg' %}"> </div>
                   <div class="client-title"><strong>joseph Lui</strong></div>
                   <div class="client-designation mb_10"> - php Developer</div>
                   <p><i class="fa fa-quote-left" aria-hidden="true"></i>Lorem ipsum dolor sit amet, volumus oporteat his at sea in Rem ipsum dolor sit amet, sea in odio ..</p>
                 </div>
                 <div class="item client-detail">
-                  <div class="client-avatar"> <img alt="" src="images/user3.jpg"> </div>
+                  <div class="client-avatar"> <img alt="" src="{% static 'images/user3.jpg' %}"> </div>
                   <div class="client-title"><strong>joseph Lui</strong></div>
                   <div class="client-designation mb_10"> - php Developer</div>
                   <p><i class="fa fa-quote-left" aria-hidden="true"></i>Lorem ipsum dolor sit amet, volumus oporteat his at sea in Rem ipsum dolor sit amet, sea in odio ..</p>
@@ -560,11 +561,11 @@
   </div>
   <!-- =====  FOOTER END  ===== -->
   <a id="scrollup"></a>
-  <script src="js/jQuery_v3.1.1.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.magnific-popup.js"></script>
-  <script src="js/custom.js"></script>
+  <script src="{% static 'js/jQuery_v3.1.1.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/jquery.magnific-popup.js' %}"></script>
+  <script src="{% static 'js/custom.js' %}"></script>
 </body>
 
 </html>
