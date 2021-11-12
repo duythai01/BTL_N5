@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if (gte IE 9)|!(IE)]><!-->
 <html lang="en">
 <!--<![endif]-->
@@ -6,7 +6,7 @@
 <head>
   <!-- =====  BASIC PAGE NEEDS  ===== -->
   <meta charset="utf-8">
-  <title>OYEENok E-commerce Bootstrap Template</title>
+  <title>BTL_N5</title>
   <!-- =====  SEO MATE  ===== -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="description" content="">
@@ -99,7 +99,7 @@
               <button type="button" class="btn btn-default btn-lg"><i class="fa fa-search"></i></button>
               </span> </div>
             </div>
-            <div class="navbar-header col-xs-6 col-sm-4"> <a class="navbar-brand" href="index.html"> <img alt="OYEENok" src="{% static 'images/logo.png' %}"> </a> </div>
+            <div class="navbar-header col-xs-6 col-sm-4"> <a class="navbar-brand" href="http://127.0.0.1:8000/"> <img alt="OYEENok" src="{% static 'images/logo.png' %}"> </a> </div>
             <div class="col-xs-6 col-sm-4 shopcart">
               <div id="cart" class="btn-group btn-block mtb_40">
                 <button type="button" class="btn" data-target="#cart-dropdown" data-toggle="collapse" aria-expanded="true"><span id="shippingcart">Shopping cart</span><span id="cart-total">items (0)</span> </button>
@@ -149,10 +149,10 @@
                     </table>
                   </li>
                   <li>
-                    <form action="cart_page.html">
+                    <form action="http://127.0.0.1:8000/cart">
                       <input class="btn pull-left mt_10" value="View cart" type="submit">
                     </form>
-                    <form action="checkout_page.html">
+                    <form action="http://127.0.0.1:8000/order">
                       <input class="btn pull-right mt_10" value="Checkout" type="submit">
                     </form>
                   </li>
@@ -165,9 +165,9 @@
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse"> <span class="i-bar"><i class="fa fa-bars"></i></span></button>
             <div class="collapse navbar-collapse js-navbar-collapse">
               <ul id="menu" class="nav navbar-nav">
-                <li> <a href="index.html">Home</a></li>
-                <li> <a href="category_page.html">women</a></li>
-                <li> <a href="category_page.html">men</a></li>
+                <li> <a href="http://127.0.0.1:8000/">Home</a></li>
+                <li> <a href="http://127.0.0.1:8000/categories">women</a></li>
+                <li> <a href="http://127.0.0.1:8000/categories">men</a></li>
                 <li class="dropdown mega-dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Collection </a>
                   <ul class="dropdown-menu mega-dropdown-menu row">
                     <li class="col-md-3">
@@ -224,15 +224,15 @@
                     </li>
                   </ul>
                 </li>
-                <li> <a href="blog_page.html">Blog</a></li>
-                <li> <a href="about.html">About us</a></li>
+                <li> <a href="http://127.0.0.1:8000/blog">Blog</a></li>
+                <li> <a href="http://127.0.0.1:8000/about">About us</a></li>
                 <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages </a>
                   <ul class="dropdown-menu">
-                    <li> <a href="contact_us.html">Contact us</a></li>
-                    <li> <a href="cart_page.html">Cart</a></li>
-                    <li> <a href="checkout_page.html">Checkout</a></li>
-                    <li> <a href="product_detail_page.html">Product Detail Page</a></li>
-                    <li> <a href="single_blog.html">Single Post</a></li>
+                    <li> <a href="http://127.0.0.1:8000/contact_us">Contact us</a></li>
+                    <li> <a href="http://127.0.0.1:8000/cart">Cart</a></li>
+                    <li> <a href="http://127.0.0.1:8000/order">Checkout</a></li>
+                    <li> <a href="http://127.0.0.1:8000/detail">Product Detail Page</a></li>
+                    <li> <a href="http://127.0.0.1:8000/single_blog">Single Post</a></li>
                   </ul>
                 </li>
               </ul>
@@ -318,7 +318,7 @@
                   <div class="product-grid">
                     <div class="item">
                       <div class="product-thumb">
-                        <div class="image product-imageblock"> <a href="product_detail_page.html"> <img data-name="product_image" src="{% static 'images/product/product9.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product9-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                        <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product9.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product9-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
                           <div class="button-group text-center">
                             <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                             <div class="quickview"><a href="#"><span>Quick View</span></a></div>
@@ -338,7 +338,7 @@
                   <div class="product-grid">
                     <div class="item">
                       <div class="product-thumb">
-                        <div class="image product-imageblock"> <a href="product_detail_page.html"> <img data-name="product_image" src="{% static 'images/product/product1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product1-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                        <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product1-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
                           <div class="button-group text-center">
                             <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                             <div class="quickview"><a href="#"><span>Quick View</span></a></div>
@@ -358,7 +358,7 @@
                   <div class="product-grid">
                     <div class="item">
                       <div class="product-thumb">
-                        <div class="image product-imageblock"> <a href="product_detail_page.html"> <img data-name="product_image" src="{% static 'images/product/product3.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product3-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                        <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product3.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product3-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
                           <div class="button-group text-center">
                             <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                             <div class="quickview"><a href="#"><span>Quick View</span></a></div>
@@ -378,7 +378,7 @@
                   <div class="product-grid">
                     <div class="item">
                       <div class="product-thumb">
-                        <div class="image product-imageblock"> <a href="product_detail_page.html"> <img data-name="product_image" src="{% static 'images/product/product5.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product5-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                        <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product5.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product5-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
                           <div class="button-group text-center">
                             <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                             <div class="quickview"><a href="#"><span>Quick View</span></a></div>
@@ -398,7 +398,7 @@
                   <div class="product-grid">
                     <div class="item">
                       <div class="product-thumb  mb_30">
-                        <div class="image product-imageblock"> <a href="product_detail_page.html"> <img data-name="product_image" src="{% static 'images/product/product7.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product7-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                        <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product7.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product7-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
                           <div class="button-group text-center">
                             <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                             <div class="quickview"><a href="#"><span>Quick View</span></a></div>
@@ -418,7 +418,7 @@
                   <div class="product-grid">
                     <div class="item">
                       <div class="product-thumb  mb_30">
-                        <div class="image product-imageblock"> <a href="product_detail_page.html"> <img data-name="product_image" src="{% static 'images/product/product9.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product9-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                        <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product9.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product9-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
                           <div class="button-group text-center">
                             <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                             <div class="quickview"><a href="#"><span>Quick View</span></a></div>
@@ -442,7 +442,7 @@
                   <div class="product-grid">
                     <div class="item">
                       <div class="product-thumb  mb_30">
-                        <div class="image product-imageblock"> <a href="product_detail_page.html"> <img data-name="product_image" src="{% static 'images/product/product1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product1-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                        <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product1-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
                           <div class="button-group text-center">
                             <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                             <div class="quickview"><a href="#"><span>Quick View</span></a></div>
@@ -462,7 +462,7 @@
                   <div class="product-grid">
                     <div class="item">
                       <div class="product-thumb  mb_30">
-                        <div class="image product-imageblock"> <a href="product_detail_page.html"> <img data-name="product_image" src="{% static 'images/product/product3.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product3-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                        <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product3.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product3-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
                           <div class="button-group text-center">
                             <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                             <div class="quickview"><a href="#"><span>Quick View</span></a></div>
@@ -482,7 +482,7 @@
                   <div class="product-grid">
                     <div class="item">
                       <div class="product-thumb  mb_30">
-                        <div class="image product-imageblock"> <a href="product_detail_page.html"> <img data-name="product_image" src="{% static 'images/product/product5.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product5-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                        <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product5.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product5-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
                           <div class="button-group text-center">
                             <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                             <div class="quickview"><a href="#"><span>Quick View</span></a></div>
@@ -502,7 +502,7 @@
                   <div class="product-grid">
                     <div class="item">
                       <div class="product-thumb  mb_30">
-                        <div class="image product-imageblock"> <a href="product_detail_page.html"> <img data-name="product_image" src="{% static 'images/product/product6.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product6-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                        <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product6.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product6-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
                           <div class="button-group text-center">
                             <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                             <div class="quickview"><a href="#"><span>Quick View</span></a></div>
@@ -522,7 +522,7 @@
                   <div class="product-grid">
                     <div class="item">
                       <div class="product-thumb  mb_30">
-                        <div class="image product-imageblock"> <a href="product_detail_page.html"> <img data-name="product_image" src="{% static 'images/product/product8.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product8-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                        <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product8.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product8-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
                           <div class="button-group text-center">
                             <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                             <div class="quickview"><a href="#"><span>Quick View</span></a></div>
@@ -542,7 +542,7 @@
                   <div class="product-grid">
                     <div class="item">
                       <div class="product-thumb  mb_30">
-                        <div class="image product-imageblock"> <a href="product_detail_page.html"> <img data-name="product_image" src="{% static 'images/product/product10.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product10-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                        <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product10.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product10-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
                           <div class="button-group text-center">
                             <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                             <div class="quickview"><a href="#"><span>Quick View</span></a></div>
@@ -566,7 +566,7 @@
                   <div class="product-grid">
                     <div class="item">
                       <div class="product-thumb  mb_30">
-                        <div class="image product-imageblock"> <a href="product_detail_page.html"> <img data-name="product_image" src="{% static 'images/product/product2.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product2-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                        <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product2.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product2-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
                           <div class="button-group text-center">
                             <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                             <div class="quickview"><a href="#"><span>Quick View</span></a></div>
@@ -586,7 +586,7 @@
                   <div class="product-grid">
                     <div class="item">
                       <div class="product-thumb  mb_30">
-                        <div class="image product-imageblock"> <a href="product_detail_page.html"> <img data-name="product_image" src="{% static 'images/product/product4.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product4-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                        <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product4.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product4-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
                           <div class="button-group text-center">
                             <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                             <div class="quickview"><a href="#"><span>Quick View</span></a></div>
@@ -606,7 +606,7 @@
                   <div class="product-grid">
                     <div class="item">
                       <div class="product-thumb  mb_30">
-                        <div class="image product-imageblock"> <a href="product_detail_page.html"> <img data-name="product_image" src="{% static 'images/product/product6.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product6-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                        <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product6.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product6-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
                           <div class="button-group text-center">
                             <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                             <div class="quickview"><a href="#"><span>Quick View</span></a></div>
@@ -626,7 +626,7 @@
                   <div class="product-grid">
                     <div class="item">
                       <div class="product-thumb  mb_30">
-                        <div class="image product-imageblock"> <a href="product_detail_page.html"> <img data-name="product_image" src="{% static 'images/product/product8.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product8-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                        <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product8.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product8-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
                           <div class="button-group text-center">
                             <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                             <div class="quickview"><a href="#"><span>Quick View</span></a></div>
@@ -646,7 +646,7 @@
                   <div class="product-grid">
                     <div class="item">
                       <div class="product-thumb  mb_30">
-                        <div class="image product-imageblock"> <a href="product_detail_page.html"> <img data-name="product_image" src="{% static 'images/product/product10.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product10-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                        <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product10.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product10-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
                           <div class="button-group text-center">
                             <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                             <div class="quickview"><a href="#"><span>Quick View</span></a></div>
@@ -666,7 +666,7 @@
                   <div class="product-grid">
                     <div class="item">
                       <div class="product-thumb  mb_30">
-                        <div class="image product-imageblock"> <a href="product_detail_page.html"> <img data-name="product_image" src="{% static 'images/product/product2.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product2-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                        <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product2.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product2-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
                           <div class="button-group text-center">
                             <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                             <div class="quickview"><a href="#"><span>Quick View</span></a></div>
@@ -711,7 +711,7 @@
                     <div class="product-grid">
                       <div class="item">
                         <div class="product-thumb  mb_30">
-                          <div class="image product-imageblock"> <a href="product_detail_page.html"> <img data-name="product_image" src="{% static 'images/product/product2.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product2-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                          <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product2.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product2-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
                             <div class="button-group text-center">
                               <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                               <div class="quickview"><a href="#"><span>Quick View</span></a></div>
@@ -731,7 +731,7 @@
                     <div class="product-grid">
                       <div class="item">
                         <div class="product-thumb  mb_30">
-                          <div class="image product-imageblock"> <a href="product_detail_page.html"> <img data-name="product_image" src="{% static 'images/product/product4.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product4-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                          <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product4.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product4-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
                             <div class="button-group text-center">
                               <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                               <div class="quickview"><a href="#"><span>Quick View</span></a></div>
@@ -751,7 +751,7 @@
                     <div class="product-grid">
                       <div class="item">
                         <div class="product-thumb  mb_30">
-                          <div class="image product-imageblock"> <a href="product_detail_page.html"> <img data-name="product_image" src="{% static 'images/product/product6.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product6-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                          <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product6.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product6-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
                             <div class="button-group text-center">
                               <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                               <div class="quickview"><a href="#"><span>Quick View</span></a></div>
@@ -771,7 +771,7 @@
                     <div class="product-grid">
                       <div class="item">
                         <div class="product-thumb  mb_30">
-                          <div class="image product-imageblock"> <a href="product_detail_page.html"> <img data-name="product_image" src="{% static 'images/product/product8.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product8-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                          <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product8.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product8-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
                             <div class="button-group text-center">
                               <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                               <div class="quickview"><a href="#"><span>Quick View</span></a></div>
@@ -791,7 +791,7 @@
                     <div class="product-grid">
                       <div class="item">
                         <div class="product-thumb  mb_30">
-                          <div class="image product-imageblock"> <a href="product_detail_page.html"> <img data-name="product_image" src="{% static 'images/product/product10.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product10-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                          <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product10.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product10-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
                             <div class="button-group text-center">
                               <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                               <div class="quickview"><a href="#"><span>Quick View</span></a></div>
@@ -811,7 +811,7 @@
                     <div class="product-grid">
                       <div class="item">
                         <div class="product-thumb  mb_30">
-                          <div class="image product-imageblock"> <a href="product_detail_page.html"> <img data-name="product_image" src="{% static 'images/product/product2.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product2-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                          <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product2.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{% static 'images/product/product2-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
                             <div class="button-group text-center">
                               <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                               <div class="quickview"><a href="#"><span>Quick View</span></a></div>
@@ -850,10 +850,10 @@
                       </div>
                       <div class="post-image-hover"> </div>
                       <div class="post-info">
-                        <h6 class="mb_10 text-uppercase"> <a href="single_blog.html">Fashions fade, style is eternal</a> </h6>
+                        <h6 class="mb_10 text-uppercase"> <a href="http://127.0.0.1:8000/single_blog">Fashions fade, style is eternal</a> </h6>
                         <div class="view-blog">
-                          <div class="write-comment pull-left"> <a href="single_blog.html"> 0 Comments</a> </div>
-                          <div class="read-more pull-right"> <a href="single_blog.html"> <i class="fa fa-link"></i> read more</a> </div>
+                          <div class="write-comment pull-left"> <a href="http://127.0.0.1:8000/single_blog"> 0 Comments</a> </div>
+                          <div class="read-more pull-right"> <a href="http://127.0.0.1:8000/single_blog"> <i class="fa fa-link"></i> read more</a> </div>
                         </div>
                       </div>
                     </div>
@@ -868,10 +868,10 @@
                       </div>
                       <div class="post-image-hover"> </div>
                       <div class="post-info">
-                        <h6 class="mb_10 text-uppercase"> <a href="single_blog.html">Fashions fade, style is eternal</a> </h6>
+                        <h6 class="mb_10 text-uppercase"> <a href="http://127.0.0.1:8000/single_blog">Fashions fade, style is eternal</a> </h6>
                         <div class="view-blog">
-                          <div class="write-comment pull-left"> <a href="single_blog.html"> 0 Comments</a> </div>
-                          <div class="read-more pull-right"> <a href="single_blog.html"> <i class="fa fa-link"></i> read more</a> </div>
+                          <div class="write-comment pull-left"> <a href="http://127.0.0.1:8000/single_blog"> 0 Comments</a> </div>
+                          <div class="read-more pull-right"> <a href="http://127.0.0.1:8000/single_blog"> <i class="fa fa-link"></i> read more</a> </div>
                         </div>
                       </div>
                     </div>
@@ -886,10 +886,10 @@
                       </div>
                       <div class="post-image-hover"> </div>
                       <div class="post-info">
-                        <h6 class="mb_10 text-uppercase"> <a href="single_blog.html">Fashions fade, style is eternal</a> </h6>
+                        <h6 class="mb_10 text-uppercase"> <a href="http://127.0.0.1:8000/single_blog">Fashions fade, style is eternal</a> </h6>
                         <div class="view-blog">
-                          <div class="write-comment pull-left"> <a href="single_blog.html"> 0 Comments</a> </div>
-                          <div class="read-more pull-right"> <a href="single_blog.html"> <i class="fa fa-link"></i> read more</a> </div>
+                          <div class="write-comment pull-left"> <a href="http://127.0.0.1:8000/single_blog"> 0 Comments</a> </div>
+                          <div class="read-more pull-right"> <a href="http://127.0.0.1:8000/single_blog"> <i class="fa fa-link"></i> read more</a> </div>
                         </div>
                       </div>
                     </div>
@@ -904,10 +904,10 @@
                       </div>
                       <div class="post-image-hover"> </div>
                       <div class="post-info">
-                        <h6 class="mb_10 text-uppercase"> <a href="single_blog.html">Fashions fade, style is eternal</a> </h6>
+                        <h6 class="mb_10 text-uppercase"> <a href="http://127.0.0.1:8000/single_blog">Fashions fade, style is eternal</a> </h6>
                         <div class="view-blog">
-                          <div class="write-comment pull-left"> <a href="single_blog.html"> 0 Comments</a> </div>
-                          <div class="read-more pull-right"> <a href="single_blog.html"> <i class="fa fa-link"></i> read more</a> </div>
+                          <div class="write-comment pull-left"> <a href="http://127.0.0.1:8000/single_blog"> 0 Comments</a> </div>
+                          <div class="read-more pull-right"> <a href="http://127.0.0.1:8000/single_blog"> <i class="fa fa-link"></i> read more</a> </div>
                         </div>
                       </div>
                     </div>
@@ -966,7 +966,7 @@
         <div class="row">
           <div class="footer-top pb_60 mb_30">
             <div class="col-xs-12 col-sm-6">
-              <div class="footer-logo"> <a href="index.html"> <img src="{% static 'images/footer-logo.png' %}" alt="OYEENok"> </a> </div>
+              <div class="footer-logo"> <a href="http://127.0.0.1:8000/"> <img src="{% static 'images/footer-logo.png' %}" alt="OYEENok"> </a> </div>
               <div class="footer-desc">Lorem ipsum doLorem ipsum dolor sit amet, consectetur adipisicagna.</div>
             </div>
             <!-- =====  testimonial  ===== -->
