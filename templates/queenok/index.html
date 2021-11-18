@@ -166,8 +166,8 @@
             <div class="collapse navbar-collapse js-navbar-collapse">
               <ul id="menu" class="nav navbar-nav">
                 <li> <a href="http://127.0.0.1:8000/">Home</a></li>
-                <li> <a href="http://127.0.0.1:8000/categories">women</a></li>
-                <li> <a href="http://127.0.0.1:8000/categories">men</a></li>
+                <li> <a href="http://127.0.0.1:8000/categories/2">women</a></li>
+                <li> <a href="http://127.0.0.1:8000/categories/4">men</a></li>
                 <li class="dropdown mega-dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Collection </a>
                   <ul class="dropdown-menu mega-dropdown-menu row">
                     <li class="col-md-3">
@@ -319,7 +319,7 @@
                   <div class="product-grid">
                     <div class="item">
                       <div class="product-thumb">
-                        <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{{p.image_link.url}}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{{p.image_link.url}}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                        <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail/{{p.id}}"> <img data-name="product_image" src="{{p.image_link.url}}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{{p.image_link.url}}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
                           <div class="button-group text-center">
                             <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                             <div class="quickview"><a href="#"><span>Quick View</span></a></div>
@@ -345,7 +345,7 @@
                   <div class="product-grid">
                     <div class="item">
                       <div class="product-thumb  mb_30">
-                        <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{{wm.image_link.url}}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{{wm.image_link.url}}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                        <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail/{{wm.id}}"> <img data-name="product_image" src="{{wm.image_link.url}}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{{wm.image_link.url}}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
                           <div class="button-group text-center">
                             <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                             <div class="quickview"><a href="#"><span>Quick View</span></a></div>
@@ -371,7 +371,7 @@
                   <div class="product-grid">
                     <div class="item">
                       <div class="product-thumb  mb_30">
-                        <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{{m.image_link.url}}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{{m.image_link.url}}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                        <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail/{{m.id}}"> <img data-name="product_image" src="{{m.image_link.url}}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{{m.image_link.url}}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
                           <div class="button-group text-center">
                             <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                             <div class="quickview"><a href="#"><span>Quick View</span></a></div>
@@ -437,7 +437,7 @@
                     <div class="product-grid">
                       <div class="item">
                         <div class="product-thumb  mb_30">
-                          <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{{fs.image_link.url}}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{{fs.image_link.url}}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                          <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail/{{fs.id}}"> <img data-name="product_image" src="{{fs.image_link.url}}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="{{fs.image_link.url}}" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
                             <div class="button-group text-center">
                               <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                               <div class="quickview"><a href="#"><span>Quick View</span></a></div>

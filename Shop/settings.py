@@ -60,7 +60,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, '/Nhom5-BTL/templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -139,4 +139,6 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+LOGIN_URL = 'login'
 
+LOGOUT_URL = '/logout/'
