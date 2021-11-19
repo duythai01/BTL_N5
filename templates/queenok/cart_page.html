@@ -6,7 +6,7 @@
 <head>
   <!-- =====  BASIC PAGE NEEDS  ===== -->
   <meta charset="utf-8">
-  <title>OYEENok E-commerce Bootstrap Template</title>
+  <title>BTL_N5</title>
   <!-- =====  SEO MATE  ===== -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="description" content="">
@@ -21,15 +21,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="viewport" content="width=device-width">
   <!-- =====  CSS  ===== -->
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
-  <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
-  <link rel="shortcut icon" href="images/favicon.png">
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/magnific-popup.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.css' %}">
+  <link rel="shortcut icon" href="{% static 'images/favicon.png' %}">
+  <link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png' %}">
+  <link rel="apple-touch-icon" sizes="72x72" href="{% static 'images/apple-touch-icon-72x72.png' %}">
+  <link rel="apple-touch-icon" sizes="114x114" href="{% static 'images/apple-touch-icon-114x114.png' %}">
 </head>
 
 <body>
@@ -48,7 +49,7 @@
             </div>
             <div class="col-xs-12 col-sm-8">
               <ul class="header-top-right text-right">
-                <li class="account"><a href="login.html">My Account</a></li>
+                <li class="account"><a href="http://127.0.0.1:8000/login&register">My Account</a></li>
                 <li class="language dropdown"> <span class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">Language <span class="caret"></span> </span>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                     <li><a href="#">English</a></li>
@@ -78,7 +79,7 @@
             <button type="button" class="btn btn-default btn-lg"><i class="fa fa-search"></i></button>
             </span> </div>
             </div>
-            <div class="navbar-header col-xs-6 col-sm-4"> <a class="navbar-brand" href="index.html"> <img alt="OYEENok" src="images/logo.png"> </a> </div>
+            <div class="navbar-header col-xs-6 col-sm-4"> <a class="navbar-brand" href="http://127.0.0.1:8000"> <img alt="OYEENok" src="{% static 'images/logo.png' %}"> </a> </div>
             <div class="col-xs-6 col-sm-4 shopcart">
               <div id="cart" class="btn-group btn-block mtb_40">
                 <button type="button" class="btn" data-target="#cart-dropdown" data-toggle="collapse" aria-expanded="true"><span id="shippingcart">Shopping cart</span><span id="cart-total">items (0)</span> </button>
@@ -89,14 +90,14 @@
                     <table class="table table-striped">
                       <tbody>
                         <tr>
-                          <td class="text-center"><a href="#"><img src="images/product/70x84.jpg" alt="iPod Classic" title="iPod Classic"></a></td>
+                          <td class="text-center"><a href="#"><img src="{% static 'images/product/70x84.jpg' %}" alt="iPod Classic" title="iPod Classic"></a></td>
                           <td class="text-left product-name"><a href="#">MacBook Pro</a> <span class="text-left price">$20.00</span>
                             <input class="cart-qty" name="product_quantity" min="1" value="1" type="number">
                           </td>
                           <td class="text-center"><a class="close-cart"><i class="fa fa-times-circle"></i></a></td>
                         </tr>
                         <tr>
-                          <td class="text-center"><a href="#"><img src="images/product/70x84.jpg" alt="iPod Classic" title="iPod Classic"></a></td>
+                          <td class="text-center"><a href="#"><img src="{% static 'images/product/70x84.jpg' %}" alt="iPod Classic" title="iPod Classic"></a></td>
                           <td class="text-left product-name"><a href="#">MacBook Pro</a> <span class="text-left price">$20.00</span>
                             <input class="cart-qty" name="product_quantity" min="1" value="1" type="number">
                           </td>
@@ -128,10 +129,10 @@
                     </table>
                   </li>
                   <li>
-                    <form action="cart_page.html">
+                    <form action="http://127.0.0.1:8000/cart">
                       <input class="btn pull-left mt_10" value="View cart" type="submit">
                     </form>
-                    <form action="checkout_page.html">
+                    <form action="http://127.0.0.1:8000/order">
                       <input class="btn pull-right mt_10" value="Checkout" type="submit">
                     </form>
                   </li>
@@ -144,9 +145,9 @@
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse"> <span class="i-bar"><i class="fa fa-bars"></i></span></button>
             <div class="collapse navbar-collapse js-navbar-collapse">
               <ul id="menu" class="nav navbar-nav">
-                <li> <a href="index.html">Home</a></li>
-                <li> <a href="category_page.html">Shop</a></li>
-                <li> <a href="blog_page.html">Blog</a></li>
+                <li> <a href="http://127.0.0.1:8000">Home</a></li>
+                <li> <a href="http://127.0.0.1:8000/categories">Shop</a></li>
+                <li> <a href="http://127.0.0.1:8000/blog">Blog</a></li>
                 <li class="dropdown mega-dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Collection </a>
                   <ul class="dropdown-menu mega-dropdown-menu row">
                     <li class="col-md-3">
@@ -189,11 +190,11 @@
                       <ul>
                         <li id="myCarousel" class="carousel slide" data-ride="carousel">
                           <div class="carousel-inner">
-                            <div class="item active"> <a href="#"><img src="images/menu-banner1.jpg" class="img-responsive" alt="Banner1"></a></div>
+                            <div class="item active"> <a href="#"><img src="{% static 'images/menu-banner1.jpg' %}" class="img-responsive" alt="Banner1"></a></div>
                             <!-- End Item -->
-                            <div class="item"> <a href="#"><img src="images/menu-banner2.jpg" class="img-responsive" alt="Banner1"></a></div>
+                            <div class="item"> <a href="#"><img src="{% static 'images/menu-banner2.jpg' %}" class="img-responsive" alt="Banner1"></a></div>
                             <!-- End Item -->
-                            <div class="item"> <a href="#"><img src="images/menu-banner3.jpg" class="img-responsive" alt="Banner1"></a></div>
+                            <div class="item"> <a href="#"><img src="{% static 'images/menu-banner3.jpg' %}" class="img-responsive" alt="Banner1"></a></div>
                             <!-- End Item -->
                           </div>
                           <!-- End Carousel Inner -->
@@ -205,14 +206,14 @@
                 </li>
                 <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages </a>
                   <ul class="dropdown-menu">
-                    <li> <a href="contact_us.html">Contact us</a></li>
-                    <li> <a href="cart_page.html">Cart</a></li>
-                    <li> <a href="checkout_page.html">Checkout</a></li>
-                    <li> <a href="product_detail_page.html">Product Detail Page</a></li>
-                    <li> <a href="single_blog.html">Single Post</a></li>
+                    <li> <a href="http://127.0.0.1:8000/contact_us">Contact us</a></li>
+                    <li> <a href="http://127.0.0.1:8000/cart">Cart</a></li>
+                    <li> <a href="http://127.0.0.1:8000/order">Checkout</a></li>
+                    <li> <a href="http://127.0.0.1:8000/detail">Product Detail Page</a></li>
+                    <li> <a href="/http://127.0.0.1:8000/single_blog">Single Post</a></li>
                   </ul>
                 </li>
-                <li> <a href="about.html">About us</a></li>
+                <li> <a href="http://127.0.0.1:8000/about_us">About us</a></li>
               </ul>
             </div>
             <!-- /.nav-collapse -->
@@ -229,7 +230,7 @@
           <div class="breadcrumb ptb_20">
             <h1>Shopping Cart</h1>
             <ul>
-              <li><a href="index.html">Home</a></li>
+              <li><a href="http://127.0.0.1:8000">Home</a></li>
               <li class="active">Shopping Cart</li>
             </ul>
           </div>
@@ -258,7 +259,7 @@
               </ul>
             </div>
           </div>
-          <div class="left_banner left-sidebar-widget mb_50 mt_30"> <a href="#"><img src="images/left1.jpg" alt="Left Banner" class="img-responsive" /></a> </div>
+          <div class="left_banner left-sidebar-widget mb_50 mt_30"> <a href="#"><img src="{% static 'images/280x440_cart.jpg' %}" alt="Left Banner" class="img-responsive" /></a> </div>
           <div class="left-special left-sidebar-widget mb_50">
             <div class="heading-part mb_20 ">
               <h2 class="main_title">Top Products</h2>
@@ -268,7 +269,7 @@
                 <li class="item product-layout-left mb_20">
                   <div class="product-list col-xs-4">
                     <div class="product-thumb">
-                      <div class="image product-imageblock"> <a href="product_detail_page.html"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="images/product/product1.jpg"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="images/product/product1-1.jpg"> </a> </div>
+                      <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product1.jpg' %}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product1-1.jpg' %}"> </a> </div>
                     </div>
                   </div>
                   <div class="col-xs-8">
@@ -283,7 +284,7 @@
                 <li class="item product-layout-left mb_20">
                   <div class="product-list col-xs-4">
                     <div class="product-thumb">
-                      <div class="image product-imageblock"> <a href="product_detail_page.html"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="images/product/product2.jpg"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="images/product/product2-1.jpg"> </a> </div>
+                      <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product2.jpg' %}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product2-1.jpg' %}"> </a> </div>
                     </div>
                   </div>
                   <div class="col-xs-8">
@@ -298,54 +299,7 @@
                 <li class="item product-layout-left mb_20">
                   <div class="product-list col-xs-4">
                     <div class="product-thumb">
-                      <div class="image product-imageblock"> <a href="product_detail_page.html"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="images/product/product3.jpg"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="images/product/product3-1.jpg"> </a> </div>
-                    </div>
-                  </div>
-                  <div class="col-xs-8">
-                    <div class="caption product-detail">
-                      <h6 class="product-name"><a href="#">New LCDScreen and HD Video Recording</a></h6>
-                      <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                      <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-              <ul class="row ">
-                <li class="item product-layout-left mb_20">
-                  <div class="product-list col-xs-4">
-                    <div class="product-thumb">
-                      <div class="image product-imageblock"> <a href="product_detail_page.html"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="images/product/product4.jpg"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="images/product/product4-1.jpg"> </a> </div>
-                    </div>
-                  </div>
-                  <div class="col-xs-8">
-                    <div class="caption product-detail">
-                      <h6 class="product-name"><a href="#">New LCDScreen and HD Video Recording</a></h6>
-                      <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                      <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
-                      </span>
-                    </div>
-                  </div>
-                </li>
-                <li class="item product-layout-left mb_20">
-                  <div class="product-list col-xs-4">
-                    <div class="product-thumb">
-                      <div class="image product-imageblock"> <a href="product_detail_page.html"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="images/product/product5.jpg"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="images/product/product5-1.jpg"> </a> </div>
-                    </div>
-                  </div>
-                  <div class="col-xs-8">
-                    <div class="caption product-detail">
-                      <h6 class="product-name"><a href="#">New LCDScreen and HD Video Recording</a></h6>
-                      <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                      <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
-                      </span>
-                    </div>
-                  </div>
-                </li>
-                <li class="item product-layout-left mb_20">
-                  <div class="product-list col-xs-4">
-                    <div class="product-thumb">
-                      <div class="image product-imageblock"> <a href="product_detail_page.html"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="images/product/product6.jpg"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="images/product/product6-1.jpg"> </a> </div>
+                      <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product3.jpg' %}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product3-1.jpg' %}"> </a> </div>
                     </div>
                   </div>
                   <div class="col-xs-8">
@@ -362,7 +316,7 @@
                 <li class="item product-layout-left mb_20">
                   <div class="product-list col-xs-4">
                     <div class="product-thumb">
-                      <div class="image product-imageblock"> <a href="product_detail_page.html"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="images/product/product7.jpg"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="images/product/product7-1.jpg"> </a> </div>
+                      <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product4.jpg' %}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product4-1.jpg' %}"> </a> </div>
                     </div>
                   </div>
                   <div class="col-xs-8">
@@ -377,7 +331,7 @@
                 <li class="item product-layout-left mb_20">
                   <div class="product-list col-xs-4">
                     <div class="product-thumb">
-                      <div class="image product-imageblock"> <a href="product_detail_page.html"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="images/product/product8.jpg"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="images/product/product8-1.jpg"> </a> </div>
+                      <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product5.jpg' %}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product5-1.jpg' %}"> </a> </div>
                     </div>
                   </div>
                   <div class="col-xs-8">
@@ -392,7 +346,7 @@
                 <li class="item product-layout-left mb_20">
                   <div class="product-list col-xs-4">
                     <div class="product-thumb">
-                      <div class="image product-imageblock"> <a href="product_detail_page.html"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="images/product/product9.jpg"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="images/product/product9-1.jpg"> </a> </div>
+                      <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product6.jpg' %}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product6-1.jpg' %}"> </a> </div>
                     </div>
                   </div>
                   <div class="col-xs-8">
@@ -409,7 +363,7 @@
                 <li class="item product-layout-left mb_20">
                   <div class="product-list col-xs-4">
                     <div class="product-thumb">
-                      <div class="image product-imageblock"> <a href="product_detail_page.html"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="images/product/product10.jpg"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="images/product/product10-1.jpg"> </a> </div>
+                      <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product7.jpg' %}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product7-1.jpg' %}"> </a> </div>
                     </div>
                   </div>
                   <div class="col-xs-8">
@@ -424,7 +378,7 @@
                 <li class="item product-layout-left mb_20">
                   <div class="product-list col-xs-4">
                     <div class="product-thumb">
-                      <div class="image product-imageblock"> <a href="product_detail_page.html"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="images/product/product1.jpg"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="images/product/product1-1.jpg"> </a> </div>
+                      <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product8.jpg' %}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product8-1.jpg' %}"> </a> </div>
                     </div>
                   </div>
                   <div class="col-xs-8">
@@ -439,7 +393,54 @@
                 <li class="item product-layout-left mb_20">
                   <div class="product-list col-xs-4">
                     <div class="product-thumb">
-                      <div class="image product-imageblock"> <a href="product_detail_page.html"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="images/product/product2.jpg"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="images/product/product2-1.jpg"> </a> </div>
+                      <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product9.jpg' %}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product9-1.jpg' %}"> </a> </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-8">
+                    <div class="caption product-detail">
+                      <h6 class="product-name"><a href="#">New LCDScreen and HD Video Recording</a></h6>
+                      <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                      <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
+                      </span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <ul class="row ">
+                <li class="item product-layout-left mb_20">
+                  <div class="product-list col-xs-4">
+                    <div class="product-thumb">
+                      <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product10.jpg' %}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product10-1.jpg' %}"> </a> </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-8">
+                    <div class="caption product-detail">
+                      <h6 class="product-name"><a href="#">New LCDScreen and HD Video Recording</a></h6>
+                      <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                      <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
+                      </span>
+                    </div>
+                  </div>
+                </li>
+                <li class="item product-layout-left mb_20">
+                  <div class="product-list col-xs-4">
+                    <div class="product-thumb">
+                      <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product1.jpg' %}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product1-1.jpg' %}"> </a> </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-8">
+                    <div class="caption product-detail">
+                      <h6 class="product-name"><a href="#">New LCDScreen and HD Video Recording</a></h6>
+                      <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                      <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
+                      </span>
+                    </div>
+                  </div>
+                </li>
+                <li class="item product-layout-left mb_20">
+                  <div class="product-list col-xs-4">
+                    <div class="product-thumb">
+                      <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product2.jpg' %}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product2-1.jpg' %}"> </a> </div>
                     </div>
                   </div>
                   <div class="col-xs-8">
@@ -471,7 +472,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="text-center"><a href="#"><img src="images/product/70x84.jpg" alt="iPod Classic" title="iPod Classic"></a></td>
+                    <td class="text-center"><a href="#"><img src="{% static 'images/product/70x84.jpg' %}" alt="iPod Classic" title="iPod Classic"></a></td>
                     <td class="text-left"><a href="product.html">iPhone</a></td>
                     <td class="text-left">product 11</td>
                     <td class="text-left">
@@ -942,7 +943,7 @@
               </table>
             </div>
           </div>
-          <form action="index.html">
+          <form action="http://127.0.0.1:8000">
             <input class="btn pull-left mt_30" type="submit" value="Continue Shopping" />
           </form>
           <form action="checkout.html">
@@ -958,15 +959,15 @@
           <div class="row">
             <div class="col-sm-12">
               <div class="brand owl-carousel ptb_20">
-                <div class="item text-center"> <a href="#"><img src="images/brand/brand1.png" alt="Disney" class="img-responsive" /></a> </div>
-                <div class="item text-center"> <a href="#"><img src="images/brand/brand2.png" alt="Dell" class="img-responsive" /></a> </div>
-                <div class="item text-center"> <a href="#"><img src="images/brand/brand3.png" alt="Harley" class="img-responsive" /></a> </div>
-                <div class="item text-center"> <a href="#"><img src="images/brand/brand4.png" alt="Canon" class="img-responsive" /></a> </div>
-                <div class="item text-center"> <a href="#"><img src="images/brand/brand5.png" alt="Canon" class="img-responsive" /></a> </div>
-                <div class="item text-center"> <a href="#"><img src="images/brand/brand6.png" alt="Canon" class="img-responsive" /></a> </div>
-                <div class="item text-center"> <a href="#"><img src="images/brand/brand7.png" alt="Canon" class="img-responsive" /></a> </div>
-                <div class="item text-center"> <a href="#"><img src="images/brand/brand8.png" alt="Canon" class="img-responsive" /></a> </div>
-                <div class="item text-center"> <a href="#"><img src="images/brand/brand9.png" alt="Canon" class="img-responsive" /></a> </div>
+                <div class="item text-center"> <a href="#"><img src="{% static 'images/brand/brand1.png' %}" alt="Disney" class="img-responsive" /></a> </div>
+                <div class="item text-center"> <a href="#"><img src="{% static 'images/brand/brand2.png' %}" alt="Dell" class="img-responsive" /></a> </div>
+                <div class="item text-center"> <a href="#"><img src="{% static 'images/brand/brand3.png' %}" alt="Harley" class="img-responsive" /></a> </div>
+                <div class="item text-center"> <a href="#"><img src="{% static 'images/brand/brand4.png' %}" alt="Canon" class="img-responsive" /></a> </div>
+                <div class="item text-center"> <a href="#"><img src="{% static 'images/brand/brand5.png' %}" alt="Canon" class="img-responsive" /></a> </div>
+                <div class="item text-center"> <a href="#"><img src="{% static 'images/brand/brand6.png' %}" alt="Canon" class="img-responsive" /></a> </div>
+                <div class="item text-center"> <a href="#"><img src="{% static 'images/brand/brand7.png' %}" alt="Canon" class="img-responsive" /></a> </div>
+                <div class="item text-center"> <a href="#"><img src="{% static 'images/brand/brand8.png' %}" alt="Canon" class="img-responsive" /></a> </div>
+                <div class="item text-center"> <a href="#"><img src="{% static 'images/brand/brand9.png' %}" alt="Canon" class="img-responsive" /></a> </div>
               </div>
             </div>
           </div>
@@ -980,7 +981,7 @@
         <div class="row">
           <div class="footer-top pb_60 mb_30">
             <div class="col-xs-12 col-sm-6">
-              <div class="footer-logo"> <a href="index.html"> <img src="images/footer-logo.png" alt="OYEENok"> </a> </div>
+              <div class="footer-logo"> <a href="http://127.0.0.1:8000"> <img src="{% static 'images/footer-logo.png' %}" alt="OYEENok"> </a> </div>
               <div class="footer-desc">Lorem ipsum doLorem ipsum dolor sit amet, consectetur adipisicagna.</div>
             </div>
             <!-- =====  testimonial  ===== -->
@@ -988,19 +989,19 @@
               <div class="Testimonial">
                 <div class="client owl-carousel">
                   <div class="item client-detail">
-                    <div class="client-avatar"> <img alt="" src="images/user1.jpg"> </div>
+                    <div class="client-avatar"> <img alt="" src="{% static 'images/user1.jpg' %}"> </div>
                     <div class="client-title"><strong>joseph Lui</strong></div>
                     <div class="client-designation mb_10"> - php Developer</div>
                     <p><i class="fa fa-quote-left" aria-hidden="true"></i>Lorem ipsum dolor sit amet, volumus oporteat his at sea in Rem ipsum dolor sit amet, sea in odio ..</p>
                   </div>
                   <div class="item client-detail">
-                    <div class="client-avatar"> <img alt="" src="images/user2.jpg"> </div>
+                    <div class="client-avatar"> <img alt="" src="{% static 'images/user2.jpg' %}"> </div>
                     <div class="client-title"><strong>joseph Lui</strong></div>
                     <div class="client-designation mb_10"> - php Developer</div>
                     <p><i class="fa fa-quote-left" aria-hidden="true"></i>Lorem ipsum dolor sit amet, volumus oporteat his at sea in Rem ipsum dolor sit amet, sea in odio ..</p>
                   </div>
                   <div class="item client-detail">
-                    <div class="client-avatar"> <img alt="" src="images/user3.jpg"> </div>
+                    <div class="client-avatar"> <img alt="" src="{% static 'images/user3.jpg' %}"> </div>
                     <div class="client-title"><strong>joseph Lui</strong></div>
                     <div class="client-designation mb_10"> - php Developer</div>
                     <p><i class="fa fa-quote-left" aria-hidden="true"></i>Lorem ipsum dolor sit amet, volumus oporteat his at sea in Rem ipsum dolor sit amet, sea in odio ..</p>
@@ -1019,7 +1020,7 @@
               <li><a href="#">Delivery Information</a></li>
               <li><a href="#">Privacy Policy</a></li>
               <li><a href="#">Terms & Conditions</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="http://127.0.0.1:8000/contact_us">Contact Us</a></li>
             </ul>
           </div>
           <div class="col-md-3 footer-block">
@@ -1088,11 +1089,11 @@
     <!-- =====  FOOTER END  ===== -->
   </div>
   <a id="scrollup"></a>
-  <script src="js/jQuery_v3.1.1.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.magnific-popup.js"></script>
-  <script src="js/custom.js"></script>
+  <script src="{% static 'js/jQuery_v3.1.1.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/jquery.magnific-popup.js' %}"></script>
+  <script src="{% static 'js/custom.js' %}"></script>
 </body>
 
 </html>
