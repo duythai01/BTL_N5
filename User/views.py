@@ -1,3 +1,10 @@
+from django.contrib.auth.views import LoginView
 from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
+# def Login(request):
+#     return render(request, 'queenok/login.html')
+#
+# class  SiteLoginView(LoginView):
+#     template_name = 'queenok/login.html'
+
