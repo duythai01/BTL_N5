@@ -244,19 +244,9 @@
                 <h2 class="main_title">Top category</h2>
               </div>
               <ul class="nav  main-navigation collapse in">
-                <li><a href="#">Appliances</a></li>
-                <li><a href="#">Mobile Phones</a></li>
-                <li><a href="#">Tablet PC & Accessories</a></li>
-                <li><a href="#">Consumer Electronics</a></li>
-                <li><a href="#">Computers & Networking</a></li>
-                <li><a href="#">Electrical & Tools</a></li>
-                <li><a href="#">Apparel</a></li>
-                <li><a href="#">Bags & Shoes</a></li>
-                <li><a href="#">Toys & Hobbies</a></li>
-                <li><a href="#">Watches & Jewelry</a></li>
-                <li><a href="#">Home & Garden</a></li>
-                <li><a href="#">Health & Beauty</a></li>
-                <li><a href="#">Outdoors & Sports</a></li>
+                 {% for cate in categories %}
+                <li><a href="http://127.0.0.1:8000/categories/{{ cate.id}}">{{ cate.name }}<a></li>
+                {% endfor %}
               </ul>
             </div>
           </div>
@@ -310,199 +300,87 @@
               </div>
             </div>
           </div>
-          <div class="left_banner left-sidebar-widget mb_50"> <a href="#"><img src="{% static 'images/280x440_cate.jpg' %}" alt="Left Banner" class="img-responsive" /></a> </div>
+          <div class="left_banner left-sidebar-widget mb_50"> <a href="#"><img src="{% static 'images/left_1.jpg' %}" alt="Left Banner" class="img-responsive" /></a> </div>
           <div class="left-special left-sidebar-widget mb_50">
             <div class="heading-part mb_10 ">
-              <h2 class="main_title">Top Products</h2>
+              <h2 class="main_title">New Products</h2>
             </div>
             <div id="left-special" class="owl-carousel">
               <ul class="row ">
+                {% for n in New_product1 %}
                 <li class="item product-layout-left mb_20">
                   <div class="product-list col-xs-4">
                     <div class="product-thumb">
-                      <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product1.jpg' %}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product1-1.jpg' %}"> </a> </div>
+                      <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail/{{n.id}}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{{n.image_link.url}}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{{n.image_link.url}}"> </a> </div>
                     </div>
                   </div>
                   <div class="col-xs-8">
                     <div class="caption product-detail">
-                      <h6 class="product-name"><a href="#">New LCDScreen and HD Video Recording</a></h6>
+                      <h6 class="product-name"><a href="#">{{n.name}}</a></h6>
                       <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                      <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
+                      <span class="price"><span class="amount"><span class="currencySymbol">$</span>{{n.price}}</span>
                       </span>
                     </div>
                   </div>
                 </li>
-                <li class="item product-layout-left mb_20">
-                  <div class="product-list col-xs-4">
-                    <div class="product-thumb">
-                      <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product3.jpg' %}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product3-1.jpg' %}"> </a> </div>
-                    </div>
-                  </div>
-                  <div class="col-xs-8">
-                    <div class="caption product-detail">
-                      <h6 class="product-name"><a href="#">New LCDScreen and HD Video Recording</a></h6>
-                      <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                      <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
-                      </span>
-                    </div>
-                  </div>
-                </li>
-                <li class="item product-layout-left mb_20">
-                  <div class="product-list col-xs-4">
-                    <div class="product-thumb">
-                      <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product4.jpg' %}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product4-1.jpg' %}"> </a> </div>
-                    </div>
-                  </div>
-                  <div class="col-xs-8">
-                    <div class="caption product-detail">
-                      <h6 class="product-name"><a href="#">New LCDScreen and HD Video Recording</a></h6>
-                      <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                      <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
-                      </span>
-                    </div>
-                  </div>
-                </li>
+                {% endfor %}
               </ul>
-              <ul class="row ">
+             <ul class="row ">
+                {% for n in New_product2 %}
                 <li class="item product-layout-left mb_20">
                   <div class="product-list col-xs-4">
                     <div class="product-thumb">
-                      <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product5.jpg' %}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product5-1.jpg' %}"> </a> </div>
+                      <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail/{{n.id}}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{{n.image_link.url}}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{{n.image_link.url}}"> </a> </div>
                     </div>
                   </div>
                   <div class="col-xs-8">
                     <div class="caption product-detail">
-                      <h6 class="product-name"><a href="#">New LCDScreen and HD Video Recording</a></h6>
+                      <h6 class="product-name"><a href="#">{{n.name}}</a></h6>
                       <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                      <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
+                      <span class="price"><span class="amount"><span class="currencySymbol">$</span>{{n.price}}</span>
                       </span>
                     </div>
                   </div>
                 </li>
-                <li class="item product-layout-left mb_20">
-                  <div class="product-list col-xs-4">
-                    <div class="product-thumb">
-                      <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product6.jpg' %}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product6-1.jpg' %}"> </a> </div>
-                    </div>
-                  </div>
-                  <div class="col-xs-8">
-                    <div class="caption product-detail">
-                      <h6 class="product-name"><a href="#">New LCDScreen and HD Video Recording</a></h6>
-                      <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                      <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
-                      </span>
-                    </div>
-                  </div>
-                </li>
-                <li class="item product-layout-left mb_20">
-                  <div class="product-list col-xs-4">
-                    <div class="product-thumb">
-                      <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product7.jpg' %}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product7-1.jpg' %}"> </a> </div>
-                    </div>
-                  </div>
-                  <div class="col-xs-8">
-                    <div class="caption product-detail">
-                      <h6 class="product-name"><a href="#">New LCDScreen and HD Video Recording</a></h6>
-                      <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                      <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
-                      </span>
-                    </div>
-                  </div>
-                </li>
+                {% endfor %}
               </ul>
-              <ul class="row ">
+               <ul class="row ">
+                {% for n in New_product3 %}
                 <li class="item product-layout-left mb_20">
                   <div class="product-list col-xs-4">
                     <div class="product-thumb">
-                      <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product8.jpg' %}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product8-1.jpg' %}"> </a> </div>
+                      <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail/{{n.id}}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{{n.image_link.url}}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{{n.image_link.url}}"> </a> </div>
                     </div>
                   </div>
                   <div class="col-xs-8">
                     <div class="caption product-detail">
-                      <h6 class="product-name"><a href="#">New LCDScreen and HD Video Recording</a></h6>
+                      <h6 class="product-name"><a href="#">{{n.name}}</a></h6>
                       <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                      <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
+                      <span class="price"><span class="amount"><span class="currencySymbol">$</span>{{n.price}}</span>
                       </span>
                     </div>
                   </div>
                 </li>
-                <li class="item product-layout-left mb_20">
-                  <div class="product-list col-xs-4">
-                    <div class="product-thumb">
-                      <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product9.jpg' %}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product9-1.jpg' %}"> </a> </div>
-                    </div>
-                  </div>
-                  <div class="col-xs-8">
-                    <div class="caption product-detail">
-                      <h6 class="product-name"><a href="#">New LCDScreen and HD Video Recording</a></h6>
-                      <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                      <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
-                      </span>
-                    </div>
-                  </div>
-                </li>
-                <li class="item product-layout-left mb_20">
-                  <div class="product-list col-xs-4">
-                    <div class="product-thumb">
-                      <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product10.jpg' %}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product10-1.jpg' %}"> </a> </div>
-                    </div>
-                  </div>
-                  <div class="col-xs-8">
-                    <div class="caption product-detail">
-                      <h6 class="product-name"><a href="#">New LCDScreen and HD Video Recording</a></h6>
-                      <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                      <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
-                      </span>
-                    </div>
-                  </div>
-                </li>
+                {% endfor %}
               </ul>
-              <ul class="row ">
+               <ul class="row ">
+                {% for n in New_product4 %}
                 <li class="item product-layout-left mb_20">
                   <div class="product-list col-xs-4">
                     <div class="product-thumb">
-                      <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product1.jpg' %}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product1-1.jpg' %}"> </a> </div>
+                      <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail/{{n.id}}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{{n.image_link.url}}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{{n.image_link.url}}"> </a> </div>
                     </div>
                   </div>
                   <div class="col-xs-8">
                     <div class="caption product-detail">
-                      <h6 class="product-name"><a href="#">New LCDScreen and HD Video Recording</a></h6>
+                      <h6 class="product-name"><a href="#">{{n.name}}</a></h6>
                       <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                      <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
+                      <span class="price"><span class="amount"><span class="currencySymbol">$</span>{{n.price}}</span>
                       </span>
                     </div>
                   </div>
                 </li>
-                <li class="item product-layout-left mb_20">
-                  <div class="product-list col-xs-4">
-                    <div class="product-thumb">
-                      <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product2.jpg' %}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product2-1.jpg' %}"> </a> </div>
-                    </div>
-                  </div>
-                  <div class="col-xs-8">
-                    <div class="caption product-detail">
-                      <h6 class="product-name"><a href="#">New LCDScreen and HD Video Recording</a></h6>
-                      <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                      <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
-                      </span>
-                    </div>
-                  </div>
-                </li>
-                <li class="item product-layout-left mb_20">
-                  <div class="product-list col-xs-4">
-                    <div class="product-thumb">
-                      <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product3.jpg' %}"> <img class="img-responsive" title="iPod Classic" alt="iPod Classic" src="{% static 'images/product/product3-1.jpg' %}"> </a> </div>
-                    </div>
-                  </div>
-                  <div class="col-xs-8">
-                    <div class="caption product-detail">
-                      <h6 class="product-name"><a href="#">New LCDScreen and HD Video Recording</a></h6>
-                      <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                      <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
-                      </span>
-                    </div>
-                  </div>
-                </li>
+                {% endfor %}
               </ul>
             </div>
           </div>
@@ -547,10 +425,11 @@
             </div>
           </div>
           <div class="row">
+            {% for p in Product %}
             <div class="product-layout  product-grid  col-md-4 col-sm-6 col-xs-12 ">
               <div class="item">
                 <div class="product-thumb clearfix mb_30">
-                  <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product3.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive" /> <img src="{% static 'images/product/product3-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive" /> </a>
+                  <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail/{{p.id}}"> <img data-name="product_image" src="{{p.image_link.url}}" alt="iPod Classic" title="iPod Classic" class="img-responsive" /> <img src="{{p.image_link.url}}" alt="iPod Classic" title="iPod Classic" class="img-responsive" /> </a>
                     <div class="button-group text-center">
                       <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                       <div class="quickview"><a href="#"><span>Quick View</span></a></div>
@@ -559,246 +438,16 @@
                     </div>
                   </div>
                   <div class="caption product-detail text-center">
-                    <h6 data-name="product_name" class="product-name mt_20"><a href="#" title="Casual Shirt With Ruffle Hem">New LCDScreen and HD Video Recording</a></h6>
+                    <h6 data-name="product_name" class="product-name mt_20"><a href="#" title="Casual Shirt With Ruffle Hem">{{p.name}}</a></h6>
                     <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                    <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
+                    <span class="price"><span class="amount"><span class="currencySymbol">$</span>{{p.price}}</span>
                     </span>
                     <p class="product-desc mt_20 mb_60"> More room to move. With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.Cover Flow. Browse through your music collection by flipping..</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="product-layout  product-grid  col-md-4 col-sm-6 col-xs-12 ">
-              <div class="item">
-                <div class="product-thumb clearfix mb_30">
-                  <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product4.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive" /> <img src="{% static 'images/product/product4-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive" /> </a>
-                    <div class="button-group text-center">
-                      <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
-                      <div class="quickview"><a href="#"><span>Quick View</span></a></div>
-                      <div class="compare"><a href="#"><span>Compare</span></a></div>
-                      <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
-                    </div>
-                  </div>
-                  <div class="caption product-detail text-center">
-                    <h6 data-name="product_name" class="product-name mt_20"><a href="#" title="Casual Shirt With Ruffle Hem">New LCDScreen and HD Video Recording</a></h6>
-                    <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                    <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
-                    </span>
-                    <p class="product-desc mt_20 mb_60"> More room to move. With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.Cover Flow. Browse through your music collection by flipping..</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="product-layout  product-grid  col-md-4 col-sm-6 col-xs-12 ">
-              <div class="item">
-                <div class="product-thumb clearfix mb_30">
-                  <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product5.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive" /> <img src="{% static 'images/product/product5-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive" /> </a>
-                    <div class="button-group text-center">
-                      <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
-                      <div class="quickview"><a href="#"><span>Quick View</span></a></div>
-                      <div class="compare"><a href="#"><span>Compare</span></a></div>
-                      <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
-                    </div>
-                  </div>
-                  <div class="caption product-detail text-center">
-                    <h6 data-name="product_name" class="product-name mt_20"><a href="#" title="Casual Shirt With Ruffle Hem">New LCDScreen and HD Video Recording</a></h6>
-                    <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                    <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
-                    </span>
-                    <p class="product-desc mt_20 mb_60"> More room to move. With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.Cover Flow. Browse through your music collection by flipping..</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="product-layout  product-grid  col-md-4 col-sm-6 col-xs-12 ">
-              <div class="item">
-                <div class="product-thumb clearfix mb_30">
-                  <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product6.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive" /> <img src="{% static 'images/product/product6-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive" /> </a>
-                    <div class="button-group text-center">
-                      <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
-                      <div class="quickview"><a href="#"><span>Quick View</span></a></div>
-                      <div class="compare"><a href="#"><span>Compare</span></a></div>
-                      <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
-                    </div>
-                  </div>
-                  <div class="caption product-detail text-center">
-                    <h6 data-name="product_name" class="product-name mt_20"><a href="#" title="Casual Shirt With Ruffle Hem">New LCDScreen and HD Video Recording</a></h6>
-                    <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                    <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
-                    </span>
-                    <p class="product-desc mt_20 mb_60"> More room to move. With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.Cover Flow. Browse through your music collection by flipping..</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="product-layout  product-grid  col-md-4 col-sm-6 col-xs-12 ">
-              <div class="item">
-                <div class="product-thumb clearfix mb_30">
-                  <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product7.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive" /> <img src="{% static 'images/product/product7-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive" /> </a>
-                    <div class="button-group text-center">
-                      <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
-                      <div class="quickview"><a href="#"><span>Quick View</span></a></div>
-                      <div class="compare"><a href="#"><span>Compare</span></a></div>
-                      <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
-                    </div>
-                  </div>
-                  <div class="caption product-detail text-center">
-                    <h6 data-name="product_name" class="product-name mt_20"><a href="#" title="Casual Shirt With Ruffle Hem">New LCDScreen and HD Video Recording</a></h6>
-                    <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                    <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
-                    </span>
-                    <p class="product-desc mt_20 mb_60"> More room to move. With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.Cover Flow. Browse through your music collection by flipping..</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="product-layout  product-grid  col-md-4 col-sm-6 col-xs-12 ">
-              <div class="item">
-                <div class="product-thumb  mb_30">
-                  <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product8.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive" /> <img src="{% static 'images/product/product8-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive" /> </a>
-                    <div class="button-group text-center">
-                      <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
-                      <div class="quickview"><a href="#"><span>Quick View</span></a></div>
-                      <div class="compare"><a href="#"><span>Compare</span></a></div>
-                      <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
-                    </div>
-                  </div>
-                  <div class="caption product-detail text-center">
-                    <h6 data-name="product_name" class="product-name mt_20"><a href="#" title="Casual Shirt With Ruffle Hem">New LCDScreen and HD Video Recording</a></h6>
-                    <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                    <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
-                    </span>
-                    <p class="product-desc mt_20 mb_60"> More room to move. With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.Cover Flow. Browse through your music collection by flipping..</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="product-layout  product-grid  col-md-4 col-sm-6 col-xs-12 ">
-              <div class="item">
-                <div class="product-thumb  mb_30">
-                  <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product9.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive" /> <img src="{% static 'images/product/product9-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive" /> </a>
-                    <div class="button-group text-center">
-                      <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
-                      <div class="quickview"><a href="#"><span>Quick View</span></a></div>
-                      <div class="compare"><a href="#"><span>Compare</span></a></div>
-                      <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
-                    </div>
-                  </div>
-                  <div class="caption product-detail text-center">
-                    <h6 data-name="product_name" class="product-name mt_20"><a href="#" title="Casual Shirt With Ruffle Hem">New LCDScreen and HD Video Recording</a></h6>
-                    <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                    <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
-                    </span>
-                    <p class="product-desc mt_20 mb_60"> More room to move. With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.Cover Flow. Browse through your music collection by flipping..</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="product-layout  product-grid  col-md-4 col-sm-6 col-xs-12 ">
-              <div class="item">
-                <div class="product-thumb  mb_30">
-                  <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product10.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive" /> <img src="{% static 'images/product/product10-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive" /> </a>
-                    <div class="button-group text-center">
-                      <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
-                      <div class="quickview"><a href="#"><span>Quick View</span></a></div>
-                      <div class="compare"><a href="#"><span>Compare</span></a></div>
-                      <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
-                    </div>
-                  </div>
-                  <div class="caption product-detail text-center">
-                    <h6 data-name="product_name" class="product-name mt_20"><a href="#" title="Casual Shirt With Ruffle Hem">New LCDScreen and HD Video Recording</a></h6>
-                    <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                    <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
-                    </span>
-                    <p class="product-desc mt_20 mb_60"> More room to move. With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.Cover Flow. Browse through your music collection by flipping..</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="product-layout  product-grid  col-md-4 col-sm-6 col-xs-12 ">
-              <div class="item">
-                <div class="product-thumb  mb_30">
-                  <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive" /> <img src="{% static 'images/product/product1-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive" /> </a>
-                    <div class="button-group text-center">
-                      <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
-                      <div class="quickview"><a href="#"><span>Quick View</span></a></div>
-                      <div class="compare"><a href="#"><span>Compare</span></a></div>
-                      <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
-                    </div>
-                  </div>
-                  <div class="caption product-detail text-center">
-                    <h6 data-name="product_name" class="product-name mt_20"><a href="#" title="Casual Shirt With Ruffle Hem">New LCDScreen and HD Video Recording</a></h6>
-                    <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                    <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
-                    </span>
-                    <p class="product-desc mt_20 mb_60"> More room to move. With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.Cover Flow. Browse through your music collection by flipping..</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="product-layout  product-grid  col-md-4 col-sm-6 col-xs-12 ">
-              <div class="item">
-                <div class="product-thumb  mb_30">
-                  <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product2.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive" /> <img src="{% static 'images/product/product2-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive" /> </a>
-                    <div class="button-group text-center">
-                      <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
-                      <div class="quickview"><a href="#"><span>Quick View</span></a></div>
-                      <div class="compare"><a href="#"><span>Compare</span></a></div>
-                      <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
-                    </div>
-                  </div>
-                  <div class="caption product-detail text-center">
-                    <h6 data-name="product_name" class="product-name mt_20"><a href="#" title="Casual Shirt With Ruffle Hem">New LCDScreen and HD Video Recording</a></h6>
-                    <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                    <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
-                    </span>
-                    <p class="product-desc mt_20 mb_60"> More room to move. With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.Cover Flow. Browse through your music collection by flipping..</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="product-layout  product-grid  col-md-4 col-sm-6 col-xs-12 ">
-              <div class="item">
-                <div class="product-thumb  mb_30">
-                  <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product3.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive" /> <img src="{% static 'images/product/product3-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive" /> </a>
-                    <div class="button-group text-center">
-                      <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
-                      <div class="quickview"><a href="#"><span>Quick View</span></a></div>
-                      <div class="compare"><a href="#"><span>Compare</span></a></div>
-                      <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
-                    </div>
-                  </div>
-                  <div class="caption product-detail text-center">
-                    <h6 data-name="product_name" class="product-name mt_20"><a href="#" title="Casual Shirt With Ruffle Hem">New LCDScreen and HD Video Recording</a></h6>
-                    <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                    <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
-                    </span>
-                    <p class="product-desc mt_20 mb_60"> More room to move. With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.Cover Flow. Browse through your music collection by flipping..</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="product-layout  product-grid  col-md-4 col-sm-6 col-xs-12 ">
-              <div class="item">
-                <div class="product-thumb  mb_30">
-                  <div class="image product-imageblock"> <a href="http://127.0.0.1:8000/detail"> <img data-name="product_image" src="{% static 'images/product/product4.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive" /> <img src="{% static 'images/product/product4-1.jpg' %}" alt="iPod Classic" title="iPod Classic" class="img-responsive" /> </a>
-                    <div class="button-group text-center">
-                      <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
-                      <div class="quickview"><a href="#"><span>Quick View</span></a></div>
-                      <div class="compare"><a href="#"><span>Compare</span></a></div>
-                      <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
-                    </div>
-                  </div>
-                  <div class="caption product-detail text-center">
-                    <h6 data-name="product_name" class="product-name mt_20"><a href="#" title="Casual Shirt With Ruffle Hem">New LCDScreen and HD Video Recording</a></h6>
-                    <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                    <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
-                    </span>
-                    <p class="product-desc mt_20 mb_60"> More room to move. With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.Cover Flow. Browse through your music collection by flipping..</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {% endfor %}
           </div>
           <div class="pagination-nav text-center mt_50">
             <ul>

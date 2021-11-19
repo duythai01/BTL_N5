@@ -60,7 +60,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, '/Nhom5-BTL/templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -129,7 +129,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-print(STATIC_URL)
+
 STATICFILES_DIRS = [
    os.path.join(BASE_DIR, "static"),
 ]
@@ -140,3 +140,4 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
